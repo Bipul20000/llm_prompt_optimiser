@@ -1,0 +1,1 @@
+the ui that will be injected into the llm or anywebsite should not be in the same framework like react, since it will create a conflict with the website's framework, it should be in vanilla js, html, css, and should be injected into the website using content script.  
