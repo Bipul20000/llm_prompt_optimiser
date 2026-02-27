@@ -1,0 +1,1 @@
+chrome.runtime.onMessage.addListener((e,p,o)=>{if(e.action==="OPTIMIZE_PROMPT")return fetch("https://llm-prompt-optimiser.vercel.app/api/optimize",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({raw_prompt:e.payload})}).then(t=>t.json()).then(t=>o({optimized_prompt:t.optimized_prompt})).catch(t=>o({error:t.toString()})),!0});

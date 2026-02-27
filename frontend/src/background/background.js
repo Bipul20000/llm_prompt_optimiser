@@ -1,6 +1,6 @@
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.action === "OPTIMIZE_PROMPT") {
-        fetch("http://localhost:3000/api/optimize", {
+        fetch("https://llm-prompt-optimiser.vercel.app/api/optimize", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

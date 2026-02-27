@@ -1,1 +1,0 @@
-chrome.runtime.onMessage.addListener((o,i,e)=>{if(o.action==="OPTIMIZE_PROMPT")return fetch("http://localhost:3000/api/optimize",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({raw_prompt:o.payload})}).then(t=>t.json()).then(t=>e({optimized_prompt:t.optimized_prompt})).catch(t=>e({error:t.toString()})),!0});
