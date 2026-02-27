@@ -1,0 +1,45 @@
+{
+    "manifest_version": 3,
+    "name": "Prompt Optimizer",
+    "version": "1.0",
+    "description": "Optimize prompts for ChatGPT, Gemini, and Claude.",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "host_permissions": [
+        "*://chatgpt.com/*",
+        "*://gemini.google.com/*",
+        "*://claude.ai/*"
+    ],
+    "background": {
+        "service_worker": "src/background/background.js",
+        "type": "module"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://chatgpt.com/*"
+            ],
+            "js": [
+                "src/content/chatgpt.jsx"
+            ]
+        },
+        {
+            "matches": [
+                "*://gemini.google.com/*"
+            ],
+            "js": [
+                "src/content/gemini.jsx"
+            ]
+        },
+        {
+            "matches": [
+                "*://claude.ai/*"
+            ],
+            "js": [
+                "src/content/claude.jsx"
+            ]
+        }
+    ]
+}

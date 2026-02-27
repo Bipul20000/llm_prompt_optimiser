@@ -1,0 +1,57 @@
+{
+  "../../../../../../@crx/manifest": {
+    "file": "assets/crx-manifest.js-C8S6Kj-x.js",
+    "name": "crx-manifest.js",
+    "src": "../../../../../../@crx/manifest",
+    "isEntry": true
+  },
+  "_index-Dqnlzsd6.js": {
+    "file": "assets/index-Dqnlzsd6.js",
+    "name": "index"
+  },
+  "chatgpt.jsx-loader.js": {
+    "file": "assets/chatgpt.jsx-loader-DVCWAIou.js",
+    "src": "chatgpt.jsx-loader.js"
+  },
+  "claude.jsx-loader.js": {
+    "file": "assets/claude.jsx-loader-Bqp_kqFN.js",
+    "src": "claude.jsx-loader.js"
+  },
+  "gemini.jsx-loader.js": {
+    "file": "assets/gemini.jsx-loader-CpO0nxmR.js",
+    "src": "gemini.jsx-loader.js"
+  },
+  "src/background/background.js": {
+    "file": "assets/background.js-BsCMURr8.js",
+    "name": "background.js",
+    "src": "src/background/background.js",
+    "isEntry": true
+  },
+  "src/content/chatgpt.jsx": {
+    "file": "assets/chatgpt.jsx-D9zasnLR.js",
+    "name": "chatgpt.jsx",
+    "src": "src/content/chatgpt.jsx",
+    "isEntry": true,
+    "imports": [
+      "_index-Dqnlzsd6.js"
+    ]
+  },
+  "src/content/claude.jsx": {
+    "file": "assets/claude.jsx-CyPPnfuj.js",
+    "name": "claude.jsx",
+    "src": "src/content/claude.jsx",
+    "isEntry": true,
+    "imports": [
+      "_index-Dqnlzsd6.js"
+    ]
+  },
+  "src/content/gemini.jsx": {
+    "file": "assets/gemini.jsx-BVrq4Oz7.js",
+    "name": "gemini.jsx",
+    "src": "src/content/gemini.jsx",
+    "isEntry": true,
+    "imports": [
+      "_index-Dqnlzsd6.js"
+    ]
+  }
+}

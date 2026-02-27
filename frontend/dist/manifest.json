@@ -1,0 +1,77 @@
+{
+  "manifest_version": 3,
+  "name": "Prompt Optimizer",
+  "version": "1.0",
+  "description": "Optimize prompts for ChatGPT, Gemini, and Claude.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://chatgpt.com/*",
+    "*://gemini.google.com/*",
+    "*://claude.ai/*"
+  ],
+  "background": {
+    "service_worker": "service-worker-loader.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "assets/chatgpt.jsx-loader-DVCWAIou.js"
+      ],
+      "matches": [
+        "*://chatgpt.com/*"
+      ]
+    },
+    {
+      "js": [
+        "assets/gemini.jsx-loader-CpO0nxmR.js"
+      ],
+      "matches": [
+        "*://gemini.google.com/*"
+      ]
+    },
+    {
+      "js": [
+        "assets/claude.jsx-loader-Bqp_kqFN.js"
+      ],
+      "matches": [
+        "*://claude.ai/*"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "*://chatgpt.com/*"
+      ],
+      "resources": [
+        "assets/index-Dqnlzsd6.js",
+        "assets/chatgpt.jsx-D9zasnLR.js"
+      ],
+      "use_dynamic_url": false
+    },
+    {
+      "matches": [
+        "*://gemini.google.com/*"
+      ],
+      "resources": [
+        "assets/index-Dqnlzsd6.js",
+        "assets/gemini.jsx-BVrq4Oz7.js"
+      ],
+      "use_dynamic_url": false
+    },
+    {
+      "matches": [
+        "*://claude.ai/*"
+      ],
+      "resources": [
+        "assets/index-Dqnlzsd6.js",
+        "assets/claude.jsx-CyPPnfuj.js"
+      ],
+      "use_dynamic_url": false
+    }
+  ]
+}
